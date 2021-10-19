@@ -24,6 +24,7 @@ console.log('Circuit: ', circuit);
 //3
 let arr = [];
 
+
 function getRandomIntInclusive(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -69,9 +70,15 @@ function deleteLastHighest(arr) {
 deleteLastHighest(arr);
 console.log(arr);
 
-function moveFirstTen(arr) {
-    arr.push(arr.shift());
+
+const moveFirstTen = arr => {
+    let newArr = arr
+    let firstTen = newArr.splice(0,10);
+
+    for(const el of firstTen)
+        newArr.push(el);
+    return newArr;
 }
 
-//moveFirstTen();
+moveFirstTen(arr);
 console.log(arr);
