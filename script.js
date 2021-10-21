@@ -115,6 +115,31 @@ console.log(names);
 //5
 console.log('***************5***************')
 
+const products = 'jajka, mleko, masło, chleb, szynka, siemię lniane';
+const productsArr = products.split(', ');
+
+console.log(productsArr)
+productsWithPrices = {};
+
+for(const key of productsArr) {
+    productsWithPrices[key] = getRandomIntInclusive(100, 2000) / 100;
+}
+
+console.log(productsWithPrices);
+
+const list = []
+const size = Object.keys(productsWithPrices).length;
+
+for(const product in productsWithPrices) {
+    if(list.length >= Math.floor(size / 2))break;
+
+    if(getRandomIntInclusive(1, 10) % 2 == 0) {
+        list.push(product);
+    }
+}
+
+console.log(list);
+
 
 
 
