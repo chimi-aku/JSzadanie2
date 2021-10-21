@@ -1,4 +1,5 @@
 // 1
+console.log('***************1***************')
 let word = '';
 
 for(let i = 1; i <= 100; i++) {
@@ -13,6 +14,7 @@ console.log(word);
 
 
 //2
+console.log('***************2***************')
 //const R = window.prompt('Podaj liczbę: ', 0) ;
 const R = 0;
 const area = Math.round(Math.PI * R * R * 100) / 100;
@@ -22,6 +24,7 @@ console.log('Circuit: ', circuit);
 
 
 //3
+console.log('***************3***************')
 let arr = [];
 
 
@@ -82,3 +85,36 @@ const moveFirstTen = arr => {
 
 moveFirstTen(arr);
 console.log(arr);
+
+
+//4
+console.log('***************4***************')
+const names = ['Geralt', 'Yennefer', 'Vesemir', 'Jaskier', 'Francesca', 'Kazimierz'];
+
+String.prototype.replaceAt = function(index, replacement) {
+    return this.substr(0, index) + replacement + this.substr(index + replacement.length);
+}
+
+console.log(names);
+for(let i = 0; i < names.length; i++) {
+    names[i] = names[i].replace(/a/g, '4');
+    names[i] = names[i].replace(/A/g, '4');
+    names[i] = names[i].replace(/e/g, '3');
+    names[i] = names[i].replace(/E/g, '3');
+
+    if(names[i].length > 6) {
+        const l = names[i].length;
+        for(let j = 3; j < l - 3; j++)
+            names[i] = names[i].replaceAt(j, ".");
+
+    }
+}
+
+console.log(names);
+
+//5
+console.log('***************5***************')
+
+
+
+
