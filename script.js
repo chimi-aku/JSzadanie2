@@ -3,7 +3,7 @@ console.log('***************1***************')
 let word = '';
 
 for(let i = 1; i <= 100; i++) {
-    console.log(i);
+    //console.log(i);
     if(i % 2 == 0 && i % 3 == 0) word += 'Fizbuz';
     else if (i % 2 == 0) word += 'Fiz';
     else if (i % 3 == 0) word += 'Buz';
@@ -15,8 +15,8 @@ console.log(word);
 
 //2
 console.log('***************2***************')
-//const R = window.prompt('Podaj liczbę: ', 0) ;
-const R = 0;
+const R = window.prompt('Podaj liczbę: ', 0) ;
+//const R = 0;
 const area = Math.round(Math.PI * R * R * 100) / 100;
 const circuit = Math.round(Math.PI * 2 * R * 100) / 100;
 console.log('Pole:', area);
